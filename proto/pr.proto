@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "github.com/Farrukh/charlen/proto";
+
+message Request {
+	string text = 1;
+}
+
+message Response {
+	int64 length =1;
+}
+
+service Counter {
+	rpc CharLength(Request) returns (Response) {}
+}
